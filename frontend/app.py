@@ -13,9 +13,10 @@ import plotly.graph_objects as go
 import streamlit as st
 from datetime import datetime
 from streamlit_autorefresh import st_autorefresh
+import os
 
 # ── Config ─────────────────────────────────────────────────────────────────────
-BACKEND = "http://localhost:8000"
+BACKEND = os.environ.get("BACKEND", "http://localhost:8000")
 AUTO_REFRESH_SECONDS = 60
 
 # ── Curated flood-prone city database ──────────────────────────────────────────

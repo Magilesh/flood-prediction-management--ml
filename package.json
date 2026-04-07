@@ -1,0 +1,15 @@
+{
+  "name": "flood-prediction-frontend",
+  "version": "1.0.0",
+  "description": "Streamlit frontend for flood prediction system",
+  "main": "frontend/app.py",
+  "scripts": {
+    "dev": "streamlit run frontend/app.py --server.port 8501 --server.address 0.0.0.0",
+    "start": "streamlit run frontend/app.py --server.port 8501 --server.address 0.0.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "python": "3.11"
+  }
+}

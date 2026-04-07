@@ -1,0 +1,35 @@
+{
+  "build": {
+    "builder": "NIXPACKS"
+  },
+  "deploy": {
+    "startCommand": "uvicorn backend.main:app --host 0.0.0.0 --port $PORT"
+  },
+  "environments": [
+    {
+      "name": "production",
+      "envVars": [
+        {
+          "name": "AUTHORITY_EMAIL",
+          "value": ""
+        },
+        {
+          "name": "SMTP_SERVER",
+          "value": "smtp.gmail.com"
+        },
+        {
+          "name": "SMTP_PORT",
+          "value": "587"
+        },
+        {
+          "name": "SMTP_USERNAME",
+          "value": ""
+        },
+        {
+          "name": "SMTP_PASSWORD",
+          "value": ""
+        }
+      ]
+    }
+  ]
+}
