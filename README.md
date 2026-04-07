@@ -4,16 +4,23 @@ An AI-powered real-time flood monitoring system using Machine Learning and live 
 
 ## 🚀 Live Deployment
 
-**Frontend Dashboard**: [Deploy to Vercel](https://vercel.com)  
-**Backend API**: [Deploy to Railway](https://railway.app)  
-**API Documentation**: `https://your-backend-url.up.railway.app/docs`
+**Quick Deploy (5 minutes)**: Run `py quick_deploy.py` for instant public URLs!
 
-### Quick Deploy
-1. Run `deploy.ps1` (PowerShell) or `deploy.bat` (Command Prompt)
-2. Follow the interactive guide
-3. Get your live URLs in 10 minutes!
+**Full Cloud Deploy**: Railway + Vercel (permanent hosting)
 
-📖 **[Complete Deployment Guide](DEPLOYMENT_GUIDE.md)**
+### Quick Deploy with ngrok
+1. Run `setup_ngrok.ps1` (PowerShell) or `setup_ngrok.bat` (Command Prompt)
+2. Get your ngrok auth token from https://ngrok.com
+3. Run `py quick_deploy.py`
+4. Get instant public URLs!
+
+### Full Cloud Deployment
+1. Run `deploy.ps1` or `deploy.bat` for step-by-step cloud deployment
+2. Or follow the visual guide: `deploy.html`
+
+📖 **[Complete Deployment Guide](DEPLOYMENT_GUIDE.md)** | **[Quick Deploy Guide](QUICK_DEPLOY.md)**
+
+---
 
 ---
 
