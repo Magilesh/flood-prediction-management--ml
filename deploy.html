@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 Deploy Flood Prediction System</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            line-height: 1.6;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        .step {
+            background: rgba(255, 255, 255, 0.2);
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid #4CAF50;
+        }
+        .step h3 {
+            margin-top: 0;
+            color: #FFD700;
+        }
+        .btn {
+            display: inline-block;
+            background: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #45a049;
+        }
+        .code {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            margin: 10px 0;
+            display: block;
+        }
+        .success {
+            background: rgba(76, 175, 80, 0.3);
+            border-left-color: #4CAF50;
+        }
+        .warning {
+            background: rgba(255, 193, 7, 0.3);
+            border-left-color: #FFC107;
+        }
+        .info {
+            background: rgba(33, 150, 243, 0.3);
+            border-left-color: #2196F3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Deploy Your Flood Prediction System</h1>
+        <p><strong>Time required: 5 minutes</strong></p>
+        <p>Follow these steps to deploy your AI-powered flood prediction system to the cloud. Everything is pre-configured!</p>
+
+        <div class="step success">
+            <h3>✅ Step 1: Deploy Backend to Railway (2 min)</h3>
+            <p>Railway will host your FastAPI backend with the ML model.</p>
+            <a href="https://railway.app" class="btn" target="_blank">🚂 Open Railway</a>
+            <ol>
+                <li>Click "Start a new project"</li>
+                <li>Click "Continue with GitHub"</li>
+                <li>Click "Deploy from GitHub repo"</li>
+                <li>Search and select: <code>Magilesh/flood-prediction-management--ml</code></li>
+                <li>Click "Deploy now"</li>
+                <li><strong>Wait 2-3 minutes</strong> for deployment</li>
+                <li><strong>Copy your backend URL</strong> (e.g., https://flood-prediction.up.railway.app)</li>
+            </ol>
+        </div>
+
+        <div class="step info">
+            <h3>ℹ️ Step 2: Configure Email Notifications (1 min)</h3>
+            <p>Optional: Enable automatic alerts when flood risk is high.</p>
+            <ol>
+                <li>In Railway dashboard, click your project</li>
+                <li>Click "Variables" tab</li>
+                <li>Click "Add Variable" for each:</li>
+                <div class="code">
+AUTHORITY_EMAIL=your-email@gmail.com<br>
+SMTP_SERVER=smtp.gmail.com<br>
+SMTP_PORT=587<br>
+SMTP_USERNAME=your-email@gmail.com<br>
+SMTP_PASSWORD=your-gmail-app-password
+                </div>
+                <li>Click "Deploy" to apply changes</li>
+            </ol>
+            <p><small>For Gmail: Get app password at <a href="https://myaccount.google.com/apppasswords" target="_blank">myaccount.google.com/apppasswords</a></small></p>
+        </div>
+
+        <div class="step success">
+            <h3>✅ Step 3: Deploy Frontend to Vercel (2 min)</h3>
+            <p>Vercel will host your Streamlit dashboard.</p>
+            <a href="https://vercel.com" class="btn" target="_blank">▲ Open Vercel</a>
+            <ol>
+                <li>Click "Continue with GitHub"</li>
+                <li>Click "New Project"</li>
+                <li>Select your repository</li>
+                <li>Configure settings:</li>
+                <div class="code">
+Framework Preset: Other<br>
+Root Directory: ./frontend<br>
+Build Command: pip install -r ../requirements.txt && echo "Ready"
+                </div>
+                <li>Add Environment Variable:</li>
+                <div class="code">
+Name: BACKEND<br>
+Value: [paste-your-railway-url-here]
+                </div>
+                <li>Click "Deploy"</li>
+                <li><strong>Wait 2-3 minutes</strong> for deployment</li>
+            </ol>
+        </div>
+
+        <div class="step warning">
+            <h3>🎉 SUCCESS! Your Live Application</h3>
+            <p>After deployment, your URLs will be:</p>
+            <div class="code">
+🌐 Frontend Dashboard: https://flood-prediction.vercel.app<br>
+🔧 Backend API: https://[your-project].up.railway.app<br>
+📚 API Docs: https://[your-project].up.railway.app/docs
+            </div>
+            <p><strong>Test it:</strong> Open the frontend URL and click "Get Prediction"</p>
+        </div>
+
+        <div class="step info">
+            <h3>🆘 Need Help?</h3>
+            <p>If you get stuck:</p>
+            <ul>
+                <li>Check the <a href="QUICK_DEPLOY.md" target="_blank">detailed guide</a></li>
+                <li>Take a screenshot of any errors</li>
+                <li>Both platforms have excellent documentation</li>
+            </ul>
+        </div>
+
+        <p style="text-align: center; margin-top: 30px;">
+            <strong>Ready to deploy? Start with Railway! 🚀</strong>
+        </p>
+    </div>
+</body>
+</html>
