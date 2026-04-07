@@ -2,6 +2,21 @@
 
 An AI-powered real-time flood monitoring system using Machine Learning and live weather data.
 
+## 🚀 Live Deployment
+
+**Frontend Dashboard**: [Deploy to Vercel](https://vercel.com)  
+**Backend API**: [Deploy to Railway](https://railway.app)  
+**API Documentation**: `https://your-backend-url.up.railway.app/docs`
+
+### Quick Deploy
+1. Run `deploy.ps1` (PowerShell) or `deploy.bat` (Command Prompt)
+2. Follow the interactive guide
+3. Get your live URLs in 10 minutes!
+
+📖 **[Complete Deployment Guide](DEPLOYMENT_GUIDE.md)**
+
+---
+
 ## Tech Stack
 | Component | Technology |
 |-----------|------------|
@@ -9,6 +24,7 @@ An AI-powered real-time flood monitoring system using Machine Learning and live 
 | Backend   | FastAPI + SQLite |
 | Frontend  | Streamlit + Plotly |
 | Weather   | Open-Meteo API (free, no key needed) |
+| Deployment | Railway + Vercel (Free tiers) |
 
 ---
 
